@@ -4,7 +4,7 @@ import { auth } from "../../../firebase-config.js";
 import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignIn = (setIsAuth) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState(""); // Added state for the message
@@ -18,6 +18,7 @@ const SignIn = () => {
                 console.log(userCredential);
                 cookies.set("auth-token", userCredential.user.refreshToken);
                 navigate("/home"); // Redirect to the home page
+                setIsAuth(true);
             })
             .catch((error) => {
                 console.log(error);

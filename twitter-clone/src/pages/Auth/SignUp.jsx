@@ -40,7 +40,7 @@ const SignUp = () => {
                     type="password"
                     placeholder="Enter your password"
                     value={password}
-                    minLength={6}
+                    minLength="6"
                     onChange={(e) => setPassword(e.target.value)}
                 ></input>
                 <button type="submit">Sign Up</button>
