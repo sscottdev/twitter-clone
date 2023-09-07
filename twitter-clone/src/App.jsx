@@ -5,6 +5,7 @@ import SignUp from "./pages/auth/SignUp.jsx";
 import {BrowserRouter, Routes} from "react-router-dom";
 import {Route} from "react-router-dom";
 import Home from "./pages/Home.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
         <BrowserRouter>
             <Routes>
-                <Route path={'/signin'} element={<SignIn />} />
+                <Route path={'/login'} element={<SignIn />} />
                 <Route path={'/signup'} element={<SignUp />} />
                 <Route path={'/home'} element={<Home />} />
             </Routes>

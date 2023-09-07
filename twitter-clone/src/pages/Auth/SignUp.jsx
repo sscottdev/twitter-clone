@@ -10,7 +10,7 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     const signInLink = () => {
-        navigate("/signin");
+        navigate("/login");
     }
 
     const signUp = (e) => {
@@ -18,7 +18,7 @@ const SignUp = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // if worked then redirect to login page
-                navigate("/signin")
+                navigate("/login")
             })
             .catch((error) => {
                 console.log(error);
@@ -46,7 +46,7 @@ const SignUp = () => {
                 <button type="submit">Sign Up</button>
             </form>
             <div className={"sign-up-link"}>
-                <p>Already have an account? <a onClick={signInLink}>Sign In</a></p>
+                <p>Already have an account? <a style={{cursor: "pointer"}} onClick={signInLink}>Sign In</a></p>
         </div>
         </div>
     );

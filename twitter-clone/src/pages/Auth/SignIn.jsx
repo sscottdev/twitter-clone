@@ -3,7 +3,6 @@ import { useState } from "react";
 import { auth } from "../../../firebase-config.js";
 import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
-
 const SignIn = (setIsAuth) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -52,7 +51,7 @@ const SignIn = (setIsAuth) => {
                 </form>
 
                 <div className="sign-up-link">
-                    <p>Don't have an account? <a onClick={signUpLink}>Sign Up</a></p>
+                    <p>Don't have an account? <a style={{cursor: "pointer"}} onClick={signUpLink}>Sign Up</a></p>
                 </div>
             </div>
         </>
